@@ -1,3 +1,6 @@
+#Edwin Zheng
+#SoftDev CW1 -- Class Names (Prints first and last names of Period 1 and 2)
+
 pd1 = ["Zheng, Edwin", "Zheng, Angela", "Zheng, Reng"]
 pd2 = ["adfasdf","adsfsadfa","adsfadsf"]
 
