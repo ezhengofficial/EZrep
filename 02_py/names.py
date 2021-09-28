@@ -2,7 +2,7 @@
 Shyne Choi, Lucas Lee, Edwin Zheng
 SoftDev
 k05 -- A Program to Print a SoftDev Student's Name But Amalgamated
-2021-28-21
+2021-27-21
 """
 
 # SUMMARY OF TRIO DISCUSSION
