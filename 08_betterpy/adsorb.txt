@@ -1,0 +1,31 @@
+Chestnut (Shriya Anand, Emma Buller, Edwin Zheng)
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity (Learning from Other Code)
+2021-09-30
+
+
+Questions: 
+Ear: 
+- What is the purpose of the debug lines?
+- What is the purpose of the "tuple"?
+
+Cashew:
+- How do you use random.choices?
+
+Pasta Noodles:
+- Why did you decide to use the arrow to return a dictionary?
+- Why are the inputs of the functions loops (if that's what they are)?
+- Why use multiple functions (objectively) instead of one?
+
+Comments:
+Ear:
+- The comment explanations made the code much easier to understand.
+
+Cashew:
+- Random.choices seems very useful
+
+Pasta Noodles:
+- They have multiline comments which is interesting.
+- Using different methods for each section of the code seems like a good practice.
+
+Concerns:
