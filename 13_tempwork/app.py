@@ -1,53 +1,75 @@
-# Goofy Goobers: Julia Nelson, Oscar Wang, Owen Yaggy
+# Eccentric Pencil: Theodore Fahey, Oscar Wang, Edwin Zheng
 # SoftDev
-# K10: Putting Little Pieces Together
-# 2021-10-05
+# K13: Template for Success
+# 2021-10-08
 
 from flask import Flask, render_template
 import random
 import csv
 app = Flask(__name__) #create instance of class Flask
 
-import csv #imports built in csv library
-import random #imports the random library
-occupations = csv.DictReader(open("data/occupations.csv", "r")) #imports csv as a dict via rows
-job_percentages = dict() #stores jobs mapping to their percentages of workforce
-#formatting it to a more iterable format
-for row in occupations:
-	row_values = tuple(row.values()) #gets rid of the unecessary keys information
-	job_percentages[row_values[0]] = float(row_values[1]) #maps jobs to their percentages of workforce in dict
+# opens the csv file and returns a dictionary of its data
+#  along with the total aggregate of the data
+def openCSV(fname):
+    dict = {}
+    temp_total = 0
+    total = 0
+    with open(fname) as f:
+        f.readline()
+        reader = csv.reader(f, delimiter=',')
+        for row in reader:
+            if 'Total' in row:
+                total = float(row[1])
+            else:      # the keys are the occupations and the value is a list of the corresponding percentage and link
+                dict[row[0]] = [float(row[1]), row[2]]  
+                temp_total += float(row[1])
+        if total == 0:
+            total = temp_total
+        return dict, total
 
-# debug_print(job_percentages)
+# picks an occupation based on the weighted percentages
+def picker():
+    jobDict, total = openCSV('data/occupations.csv')
+    total = total * 10
+    values = list(jobDict.values())
+    occ = list(jobDict.keys())
+    conDict = {}
+    sum = 0
+    for i in range(len(values)):
+        percent = values[i][0]
+        percent *= 10
+        sum += percent
+        values[i] = sum
+    for i in range(len(occ)):
+        conDict[occ[i]] = values[i]
+    n = random.randint(0, total-1)
+    for i in conDict:
+        if (n < conDict[i]):
+            return i
 
-#generates a random job given a probability dict formatted {job: percentage with total at the bottom}
-def random_job(probability_book = job_percentages): #default argument provided. Valid for an assignment use case.
-	# removes total from dictionary
-	try: #deletes total line if it exists
-		del probability_book["Total"]
-	except KeyError:
-		pass
-	jobs = list(probability_book.keys())
-	percentages = list(probability_book.values())
-
-	return random.choices(population=jobs, k=1, weights=percentages)[0]
-
-
-@app.route("/")       #assign fxn to route
+@app.route("/")       # landing page
 def display():      #code to display the HTML on the webpage
+    # HTML code to redirect to the right place
     output = f'''
-    <head>
-    <h1>Goofy Goobers:Edwin Zheng, Theodore Fahay, Oscar Wang</h1>
-    <p>SoftDev</p>
-    <p>K13: Template for Success</p>
-    <p>2021-10-08</p>
-    </head>
-    <body>
-    <b>Your randomized output: </b> {picker()} {getList()}
-    </body>
+    <center><p style="font-size:100px"><a href="http://localhost:5000//occupyflaskst">GO HERE</a></p></center>
     '''
     return output
-@app.route("/occupyflaskst")
-def test_tmplt():
-        return render_template('tablified.html', randOcc=random_job(), collection = job_percentages.keys())
+
+
+@app.route("/occupyflaskst")    # main page
+def run(): # displays the occupations as links in a table
+    data, total = openCSV("data/occupations.csv")
+    links = []
+    # creates a 2d list called links that stores each occupation and their respective link as given in the csv
+    for key in data:
+        links.append([key,data[key][1]])
+    picked = picker()    # randomly picks an occupation
+    randLink = ''
+    links.sort()    # sorts links so that the table is in alphabetical order
+    for row in links:    # appends the link to the randomly selected occupation
+        if row[0] == picked:
+            randLink = row[1]
+    return render_template("tablified.html", randOcc=picked, RL=randLink, collection=links)
+
 app.debug = True
 app.run()

@@ -1,24 +1,24 @@
-Job Class,Percentage
-Management,6.1
-Business and Financial operations,5
-Computer and Mathematical,2.7
-Architecture and Engineering,1.7
-"Life, Physical and Social Science",0.9
-Community and Social Service,1.6
-Legal,0.8
-"Education, training and library",6.1
-"Arts, design, entertainment, sports and media",1.7
-Healthcare practioners and technical,5.5
-Healthcare support,2.8
-Protective service,2.3
-Food preparation and serving,8.3
-Building and grounds cleaning and maintenance,3.7
-Personal care and service,4
-Sales,10.2
-Office and administrative support,15.1
-"Farming, fishing and forestry",0.6
-Construction and extraction,4.3
-"Installation, maintenance and repair",3.8
-Production,6.1
-Transportation and material moving,6.5
-Total,99.8
+Job Class,Percentage,Link
+Management,6.1,https://stuyactivities.org/bealeaderassociation
+Business and Financial operations,5,https://stuyactivities.org/stuynomics
+Computer and Mathematical,2.7,https://stuyactivities.org/stuyccc
+Architecture and Engineering,1.7,https://stuyactivities.org/architecture-club
+"Life, Physical and Social Science",0.9,https://stuyactivities.org/stuybo
+Community and Social Service,1.6,https://stuyactivities.org/keyclub
+Legal,0.8,https://stuyactivities.org/stuylaw
+"Education, training and library",6.1,https://stuyactivities.org/projectteensteach
+"Arts, design, entertainment, sports and media",1.7,https://stuyactivities.org/stuyjmc
+Healthcare practioners and technical,5.5,https://stuyactivities.org/stuyfp
+Healthcare support,2.8,https://stuyactivities.org/publichealth
+Protective service,2.3,https://stuyactivities.org/StuyProjectLove
+Food preparation and serving,8.3,https://stuyactivities.org/stuyeats
+Building and grounds cleaning and maintenance,3.7,https://stuyactivities.org/stuyenviroclub
+Personal care and service,4,https://stuyactivities.org/stuysmile
+Sales,10.2,https://stuyactivities.org/businessandeconomics
+Office and administrative support,15.1,https://stuyactivities.org/studentunion
+"Farming, fishing and forestry",0.6,https://stuyactivities.org/stuyffac
+Construction and extraction,4.3,https://stuyactivities.org/stuypapercrafts
+"Installation, maintenance and repair",3.8,https://stuyactivities.org/robotics
+Production,6.1,https://stuyactivities.org/stuyanimation
+Transportation and material moving,6.5,https://stuyactivities.org/STUA
+Total,99.8,

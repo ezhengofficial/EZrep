@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<head>
-    <title>Template for Success</title>
-    <h2>Eccentric Pencils:Edwin Zheng, Theodore Fahay, Oscar Wang</h2>
-    <p>SoftDev</p>
-    <p>K13: Template for Success</p>
-    <p>2021-10-08</p>
-    <br>
-    <p>Description: creating a table with a html template in python</p>
+    <style>
+        table, tr, td, th {
+            border: 1px solid black;
+            background-color:snow;
+        }
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+    <head>
+        <title>Pls Work</title>
+        <h3>
+            <p>Eccentric Pencil: Theodore Fahey, Oscar Wang, Edwin Zheng</p>
+            <p>SoftDev</p>
+            <p>K13: Template for Success</p>
+            <p>2021-10-8</p>
+        </h3>
     </head>
     <body>
-        <br>
-        <h3>RandomJob</h3>
-        {{ randOcc }}
-        <br>
-        <br>
-        <table>
-            <tr>
-                <th>Occupations</th>
-            </tr>
-            {% for item in collection %}
-            <tr>
-              <td>{{item}}</td>
-            </tr>
-          {% endfor %}
-        </table>
+        <p><b>Your Ramdomized Output: </b><a href="{{ RL }}">{{ randOcc }}</a></p>
+            <table>
+                <tr>
+                    <th>Occupations</th>
+                </tr>
+                {% for item in collection %}
+                    <tr><td><a href="{{ item[1] }}"> {{ item[0] }} </a></td></tr>
+                {% endfor %}
+            </table>
     </body>
 </html>
