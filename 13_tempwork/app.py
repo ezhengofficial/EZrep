@@ -1,4 +1,4 @@
-# Eccentric Pencil: Theodore Fahey, Oscar Wang, Edwin Zheng
+# Eccentric Pencil: Sadid Ethun, Theodore Fahey, Oscar Wang, Edwin Zheng
 # SoftDev
 # K13: Template for Success
 # 2021-10-08
@@ -6,11 +6,13 @@
 from flask import Flask, render_template
 import random
 import csv
-app = Flask(__name__) #create instance of class Flask
+app = Flask(__name__)
 
-# opens the csv file and returns a dictionary of its data
-#  along with the total aggregate of the data
 def openCSV(fname):
+    """
+    opens the CSV file and returns a dictionary of the 
+    data along with a total aggregate of the percentages
+    """
     dict = {}
     temp_total = 0
     total = 0
@@ -27,8 +29,10 @@ def openCSV(fname):
             total = temp_total
         return dict, total
 
-# picks an occupation based on the weighted percentages
 def picker():
+    """
+    picks a random occupation based on the weighted percentages
+    """
     jobDict, total = openCSV('data/occupations.csv')
     total = total * 10
     values = list(jobDict.values())
@@ -47,9 +51,11 @@ def picker():
         if (n < conDict[i]):
             return i
 
-@app.route("/")       # landing page
-def display():      #code to display the HTML on the webpage
-    # HTML code to redirect to the right place
+@app.route("/")
+def display():
+    """
+    Code to display on the landing page to redirect to the right page
+    """
     output = f'''
     <center><p style="font-size:100px"><a href="http://localhost:5000//occupyflaskst">GO HERE</a></p></center>
     '''
@@ -57,16 +63,20 @@ def display():      #code to display the HTML on the webpage
 
 
 @app.route("/occupyflaskst")    # main page
-def run(): # displays the occupations as links in a table
+def run():
+    """
+    Code for the main page
+    displays occupations as links in a table using a 2d list 
+    of occupations and their corresponding links 
+    """
     data, total = openCSV("data/occupations.csv")
     links = []
-    # creates a 2d list called links that stores each occupation and their respective link as given in the csv
     for key in data:
         links.append([key,data[key][1]])
-    picked = picker()    # randomly picks an occupation
+    picked = picker()
     randLink = ''
-    links.sort()    # sorts links so that the table is in alphabetical order
-    for row in links:    # appends the link to the randomly selected occupation
+    links.sort()
+    for row in links:
         if row[0] == picked:
             randLink = row[1]
     return render_template("tablified.html", randOcc=picked, RL=randLink, collection=links)
