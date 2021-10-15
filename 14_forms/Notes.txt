@@ -1,0 +1,5 @@
+BlueGreen (Edwin Zheng, Shriya Anand, Zhaoyu Lin)
+
+We noticed in the terminal that our input was stored in the request arguments as a dictionary, so we accessed the dictionary and got the value for the key "username" and returned that in the web page.
+Since this approach worked, we were able to create an html template called response.html with inputs "response" and "response_method."
+By accessing the dictionary and using the render template we took the inputs of the user and placed them in the html template, thus producing a page that displayed their response.
