@@ -35,7 +35,7 @@ def authenticate():
 
 @app.route("/logout", methods=['POST']) #Logout method
 def logout():
-    if session.get("userID") == "u": #If username does exist, remove it from session and return the login page
+    if request.method == ['POST']: #If username does exist, remove it from session and return the login page
         session.pop("userID")
     return render_template('login.html', login_html = "")
 
