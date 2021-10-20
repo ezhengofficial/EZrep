@@ -1,0 +1,12 @@
+# BlueGreen (Edwin Zheng, Shriya Anand, Zhaoyu Lin)
+# SoftDev
+# K15: Sessions Greetings
+# Oct 20, 2021
+
+For this assignment, we made use of the GET for authenticate. 
+
+We were able to use the render_template multiple times using the same html template with different inputs. This allowed us to remain on the login page and tell the user if the login was incorrect without having to go to a different page.
+
+We made us of the session in flask to store and retrieve cookies. When the user logged-out, we would pop out of the session. 
+
+For the response.html, we needed considerably less inputs because it would only be accessed when the login was successful and did not need to return things like the response type.
