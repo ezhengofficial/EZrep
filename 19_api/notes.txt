@@ -1,0 +1,9 @@
+# ExtraTerrestrials (Edwin Zheng, Tina Nguyen)
+# SoftDev
+# K19 - A RESTful Journey Skyward
+# 2021-11-23
+
+notes:
+ - urllib is used to request and read from the API 
+ - json.loads turns the data read from the API as a string and turns it into a dictonary
+ - all values can then be read from the dictonary with the corrsponding key from the API 
