@@ -1,7 +1,7 @@
-# EAR (Edwin Zheng Angela Zhang Renggeng Zheng)
+# ExtraTerrestrials (Edwin Zheng, Tina Nguyen)
 # SoftDev
-# K10 - Flask Learning Day 2, the Flaskening
-# 2021-10-04
+# K19 - A RESTful Journey Skyward
+# 2021-11-23
 
 # Same file as from yesterday. See notes from 09_flask-v0/bigbrain.txt
 import urllib.request, json
