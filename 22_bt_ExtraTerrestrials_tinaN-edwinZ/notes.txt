@@ -1,0 +1,7 @@
+# ExtraTerrestrials (Edwin Zheng, Tina Nguyen)
+# SoftDev
+# K22 - Bootstrap Exploration
+# 2021-11-29
+# time spent: tbd
+
+- some features require JavaScript which needs util.js (a file the website provides)
