@@ -1,0 +1,19 @@
+ExtraTerrestrials - Edwin Zheng, Tina Nguyen
+SoftDev
+K23 - No. 2? -- Making a Website in Foundation
+2021-12-01
+time spent: TBD
+
+DISCO
+  We talked about the differences between Foundation and Bootstrap, and we agreed
+  that the formatting for both are very different. Otherwise, the two are very
+  similar in code and feature-wise.
+
+  Secure Bathtubs showed us some key features of Foundation like buttons, search
+  bars, and navigation bars. These features can also be implemented in Bootstrap.
+QCC
+  We asked if Foundation had any color changing options-there were ways to do so,
+  but it would be difficult to change the color of something.
+Q0
+
+Q1
