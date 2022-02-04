@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript fibfac</h2>
+        <p>Fib and fac test</p>
+        <h3> Fac test </h3>
+        <b> Test fac(4): </b>
+        <nobr id="fac4"></nobr>
+        <br><br>
+        <h3> Fib test </h3>
+        <b> Test fib(4): </b>
+        <nobr id="fib4"></nobr>
+</body>
+<script>
+    function fac(num) {
+    if (num < 0) 
+            return "Error : enter positive number";
+    else if (num == 0) 
+        return 1;
+    else {
+        return (num * fac(num - 1));
+    }
+    }
+    let facx = fac(4);
+    document.getElementById("fac4").innerHTML = facx;
+
+    function fib(n) {
+        if (n <= 1) 
+            return 1;
+        else {
+            return (fib(n - 1) + fib (n - 2))
+        }
+    }
+    let fibx = fib(4);
+    document.getElementById("fib4").innerHTML = fibx;
+    </script>
+</html>
