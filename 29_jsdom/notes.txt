@@ -1,0 +1,6 @@
+Team HE :: Han Zhang, Edwin Zheng
+SoftDev pd0
+K29: DOMfoolery++
+2022-02-08
+
+For the event listener, the function part needs to have event => before calling the function

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
 <!--
-     Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-     SoftDev pd0
-     K28 -- Manipulating the DOM
-     2022-02-08t
+    Team HE :: Han Zhang, Edwin Zheng
+    SoftDev pd0
+    K28 -- Manipulating the DOM
+    2022-02-08
    --------------------------------------------------
 -->
 
@@ -21,11 +21,13 @@
   </head>
 
   <body>
+
     <h1 id="h" class="blue">Hello World!</h1>
 
-    <div id="div1" class="green">This is a div</div>
-    <div id="div2">This is a second div</div>
-    <div class="blue">This is a toid div</div>
+    <button id="button"> fib(10) </button>
+    <div id="a">fib(5) = <span id = "fib"></span></div>
+    <div id="a">fac(5) = <span id = "fac"></span></div>
+    <div id="a">gcd(5,10) = <span id = "gcd"></span></div>
 
     <ol id="thelist">
       <li class="">item 0</li>
@@ -37,8 +39,17 @@
       <li class="green blue">item 6</li>
       <li class="">item 7</li>
     </ol>
+    
+    <script src="dommy_consolery.js"></script>   
 
-    <script src="dommy_consolery.js"></script>
+    <script>
+      document.getElementById("fib").innerHTML = fib(5);
+      document.getElementById("fac").innerHTML = fac(5);
+      document.getElementById("gcd").innerHTML = gcd(5,10);
+      document.getElementById("button").addEventListener("click", console.log('clicked'));
+    </script> 
+    
 
   </body>
 </html>
+

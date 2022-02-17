@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!--
+    Team HE :: Han Zhang, Edwin Zheng
+    SoftDev pd0
+    K29: DOMfoolery++
+    2022-02-08
+   --------------------------------------------------
+-->
+
+<html lang="en">
+  <!-- HTML file for exploring JavaScript interactions with the DOM -->
+
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .red   {color : #ff0000;}
+      .green {color : #00ff00;}
+      .blue  {color : #0000ff;}
+    </style>
+  </head>
+
+  <body>
+    <script src="dommy_consolery.js"></script>   
+
+    <h1 id="h" class="blue">Hello World!</h1>
+
+    <button id="fib"> fib(10) </button>
+    <br>
+    <button id="fac"> fac(10) </button>
+    <br>
+    <button id="gcd"> gcd(5,10) </button>
+
+    <ol id="thelist">
+      <li class="">item 0</li>
+      <li class="green blue">item 1</li>
+      <li class="green blue">item 2</li>
+      <li class="red green blue">item 3</li>
+      <li class="red green blue">item 4</li>
+      <li class="green blue">item 5</li>
+      <li class="green blue">item 6</li>
+      <li class="">item 7</li>
+    </ol>
+
+    <script>
+      var a = document.getElementById("fib");
+      var b = document.getElementById('fac');
+      var c = document.getElementById('gcd');
+      a.addEventListener('click', event => {a.innerHTML = (fib(10))});
+      b.addEventListener('click', event => {a.innerHTML = (fac(10))});
+      c.addEventListener('click', event => {a.innerHTML = (gcd(5,10))});
+
+  </script>
+    
+
+  </body>
+</html>
+

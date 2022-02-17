@@ -1,29 +1,7 @@
-/*
-   your PPTASK:
-   
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-    		
-    		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-   
-   (delete this block comment once you are done)
-*/
-
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08t
-// --------------------------------------------------
-
+// Team HE:: Han Zhang, Edwin Zheng
+// SoftDev 
+// K29: DOMfoolery++
+// 2022-02-09
 
 //send diagnostic output to console
 //(Ctrl-Shift-J in Firefox to reveal console)
@@ -84,31 +62,21 @@ var stripe = function() {
   }
 };
 
-//insert your implementations here for...
-
-function fac(num) {
-    if (num < 0) 
-        return "Error : enter positive number";
-    else if (num == 0) 
-        return 1;
-    else {
-        return (num * fac(num - 1));
-      }
-  }
+function fac(n) {
+	if (n <= 1)
+		return 1;
+	return (n * (fac(n - 1)));
+}
 
 function fib(n) {
-    if (n <= 1) 
-        return 1;
-    else {
-        return (fib(n - 1) + fib (n - 2))
-      }
-  }
+	if (n <= 2)
+		return 1;
+	return fib(n-1) + fib(n-2);
+}
 
-function gcd(a, b) {
-    if (b == 0) {
+function gcd(a,b) {
+    if (b == 0)
         return a;
-      }
-    else {
-        return gcd(b,a%b);
-      }
-  }
+    else 
+        return (gcd(b,b%a))
+}
